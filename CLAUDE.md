@@ -30,6 +30,15 @@ data-go-mcp-servers/
   - 사업장 상세정보 조회
   - 기간별 현황 조회
 
+### 2. NTS Business Verification (국세청 사업자등록정보 진위확인 및 상태조회)
+- **패키지**: `data-go-mcp.nts-business-verification`
+- **디렉토리**: `src/nts-business-verification/`
+- **기능**:
+  - 사업자등록정보 진위확인 (validate_business)
+  - 사업자등록 상태조회 (check_business_status) 
+  - 배치 진위확인 (batch_validate_businesses)
+- **API**: https://api.odcloud.kr/api/nts-businessman/v1
+
 ## 개발 환경 설정
 
 ### 필수 도구
@@ -106,7 +115,7 @@ twine upload ../../dist/*
 
 ## Claude Desktop 설정
 
-각 MCP 서버는 Claude Desktop에서 사용할 수 있습니다:
+### PyPI 패키지 사용 (배포 후)
 
 ```json
 {
@@ -121,6 +130,56 @@ twine upload ../../dist/*
   }
 }
 ```
+
+### 로컬 개발 환경 설정
+
+로컬 개발 시 가상환경 Python을 직접 사용:
+
+**macOS 예시:**
+```json
+{
+  "mcpServers": {
+    "nts-business-verification": {
+      "command": "/Users/username/github/data-go-mcp-servers/.venv/bin/python",
+      "args": [
+        "-m",
+        "data_go_mcp.nts_business_verification.server"
+      ],
+      "cwd": "/Users/username/github/data-go-mcp-servers/src/nts-business-verification",
+      "env": {
+        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key",
+        "PYTHONPATH": "/Users/username/github/data-go-mcp-servers/src/nts-business-verification"
+      }
+    }
+  }
+}
+```
+
+**Windows 예시:**
+```json
+{
+  "mcpServers": {
+    "nts-business-verification": {
+      "command": "C:\\Users\\username\\github\\data-go-mcp-servers\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m",
+        "data_go_mcp.nts_business_verification.server"
+      ],
+      "cwd": "C:\\Users\\username\\github\\data-go-mcp-servers\\src\\nts-business-verification",
+      "env": {
+        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key",
+        "PYTHONPATH": "C:\\Users\\username\\github\\data-go-mcp-servers\\src\\nts-business-verification"
+      }
+    }
+  }
+}
+```
+
+**중요사항:**
+- 경로를 실제 프로젝트 경로로 변경
+- API 키를 실제 키로 교체
+- Claude Desktop 완전 종료 후 재시작
+- MCP 서버 연결 시 대화창 우측 하단에 아이콘 표시
 
 ## API 키 관리
 

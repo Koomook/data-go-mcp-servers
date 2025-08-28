@@ -47,6 +47,7 @@ MCP 서버는 Model Context Protocol을 통해 특정 기능을 노출하는 경
 | 서버 | 설명 | 패키지 | PyPI |
 |------|------|--------|------|
 | **NPS Business Enrollment** | 국민연금공단 사업장 가입 정보 조회 | `data-go-mcp.nps-business-enrollment` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nps-business-enrollment)](https://pypi.org/project/data-go-mcp.nps-business-enrollment/) |
+| **NTS Business Verification** | 국세청 사업자등록정보 진위확인 및 상태조회 | `data-go-mcp.nts-business-verification` | 준비중 |
 
 ## 설치 및 설정
 
