@@ -155,9 +155,31 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync --dev
 ```
 
-### 새로운 MCP 서버 추가하기
+### 🚀 새로운 MCP 서버 빠르게 만들기
 
-새로운 공공 데이터 API를 MCP 서버로 추가하려면 [CONTRIBUTING.md](CONTRIBUTING.md)를 참조하세요.
+#### 자동화 스크립트 사용 (권장)
+
+가장 빠른 방법은 제공된 템플릿 생성 스크립트를 사용하는 것입니다:
+
+```bash
+# 대화형 스크립트 실행
+uv run python scripts/create_mcp_server.py
+```
+
+스크립트가 필요한 정보를 단계별로 안내하며, 몇 분 안에 새로운 MCP 서버를 생성합니다.
+
+#### 수동으로 템플릿 사용
+
+```bash
+# Cookiecutter 설치 (필요시)
+uv pip install cookiecutter
+
+# 템플릿으로 새 서버 생성
+uv run cookiecutter template/ -o src/
+```
+
+자세한 템플릿 사용법은 [TEMPLATE_USAGE.md](TEMPLATE_USAGE.md)를 참조하세요.
+전체 개발 가이드는 [CONTRIBUTING.md](CONTRIBUTING.md)를 참조하세요.
 
 ### 테스트 실행
 
