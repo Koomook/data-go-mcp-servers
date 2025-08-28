@@ -1,0 +1,3 @@
+Apache License 2.0
+
+See the root LICENSE file for the full license text.
