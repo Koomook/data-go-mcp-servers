@@ -48,7 +48,7 @@ MCP 서버는 Model Context Protocol을 통해 특정 기능을 노출하는 경
 | 서버 | 설명 | 패키지 | PyPI |
 |------|------|--------|------|
 | **NPS Business Enrollment** | 국민연금공단 사업장 가입 정보 조회 | `data-go-mcp.nps-business-enrollment` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nps-business-enrollment)](https://pypi.org/project/data-go-mcp.nps-business-enrollment/) |
-| **NTS Business Verification** | 국세청 사업자등록정보 진위확인 및 상태조회 | `data-go-mcp.nts-business-verification` | 준비중 |
+| **NTS Business Verification** | 국세청 사업자등록정보 진위확인 및 상태조회 | `data-go-mcp.nts-business-verification` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nts-business-verification)](https://pypi.org/project/data-go-mcp.nts-business-verification/) |
 
 ## 설치 및 설정
 
@@ -57,6 +57,9 @@ MCP 서버는 Model Context Protocol을 통해 특정 기능을 노출하는 경
 ```bash
 # NPS Business Enrollment 서버 설치
 uv pip install data-go-mcp.nps-business-enrollment
+
+# NTS Business Verification 서버 설치
+uv pip install data-go-mcp.nts-business-verification
 ```
 
 ### pip을 사용한 설치
@@ -64,6 +67,9 @@ uv pip install data-go-mcp.nps-business-enrollment
 ```bash
 # NPS Business Enrollment 서버 설치
 pip install data-go-mcp.nps-business-enrollment
+
+# NTS Business Verification 서버 설치
+pip install data-go-mcp.nts-business-verification
 ```
 
 ### Claude Desktop 설정
@@ -81,6 +87,13 @@ Claude Desktop의 설정 파일에 MCP 서버를 추가합니다:
       "args": ["data-go-mcp.nps-business-enrollment"],
       "env": {
         "NPS_API_KEY": "your-api-key-here"
+      }
+    },
+    "data-go-mcp.nts-business-verification": {
+      "command": "uvx",
+      "args": ["data-go-mcp.nts-business-verification"],
+      "env": {
+        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key-here"
       }
     }
   }

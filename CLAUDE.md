@@ -32,6 +32,7 @@ data-go-mcp-servers/
 
 ### 2. NTS Business Verification (국세청 사업자등록정보 진위확인 및 상태조회)
 - **패키지**: `data-go-mcp.nts-business-verification`
+- **PyPI**: https://pypi.org/project/data-go-mcp.nts-business-verification/
 - **디렉토리**: `src/nts-business-verification/`
 - **기능**:
   - 사업자등록정보 진위확인 (validate_business)
