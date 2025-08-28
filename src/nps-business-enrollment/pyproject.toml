@@ -27,11 +27,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/data-go-mcp-servers"
-Repository = "https://github.com/yourusername/data-go-mcp-servers"
-Documentation = "https://github.com/yourusername/data-go-mcp-servers/tree/main/src/nps-business-enrollment"
-"Bug Tracker" = "https://github.com/yourusername/data-go-mcp-servers/issues"
-Changelog = "https://github.com/yourusername/data-go-mcp-servers/blob/main/src/nps-business-enrollment/CHANGELOG.md"
+Homepage = "https://github.com/Koomook/data-go-mcp-servers"
+Repository = "https://github.com/Koomook/data-go-mcp-servers"
+Documentation = "https://github.com/Koomook/data-go-mcp-servers/tree/main/src/nps-business-enrollment"
+"Bug Tracker" = "https://github.com/Koomook/data-go-mcp-servers/issues"
+Changelog = "https://github.com/Koomook/data-go-mcp-servers/blob/main/src/nps-business-enrollment/CHANGELOG.md"
 
 [project.scripts]
 "data-go-mcp.nps-business-enrollment" = "data_go_mcp.nps_business_enrollment.server:main"

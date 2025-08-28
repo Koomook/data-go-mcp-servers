@@ -31,7 +31,7 @@
    curl -LsSf https://astral.sh/uv/install.sh | sh
    
    # 레포지토리 클론
-   git clone https://github.com/yourusername/data-go-mcp-servers.git
+   git clone https://github.com/Koomook/data-go-mcp-servers.git
    cd data-go-mcp-servers
    
    # 개발 의존성 설치
@@ -87,10 +87,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/data-go-mcp-servers"
-Repository = "https://github.com/yourusername/data-go-mcp-servers"
-Documentation = "https://github.com/yourusername/data-go-mcp-servers#your-api-name"
-"Bug Tracker" = "https://github.com/yourusername/data-go-mcp-servers/issues"
+Homepage = "https://github.com/Koomook/data-go-mcp-servers"
+Repository = "https://github.com/Koomook/data-go-mcp-servers"
+Documentation = "https://github.com/Koomook/data-go-mcp-servers#your-api-name"
+"Bug Tracker" = "https://github.com/Koomook/data-go-mcp-servers/issues"
 
 [project.scripts]
 data-go-mcp-your-api-name = "data_go_mcp.your_api_name.server:main"
@@ -457,6 +457,6 @@ feat(weather): add weather forecast MCP server
 
 ## 도움이 필요하신가요?
 
-- [Issues](https://github.com/yourusername/data-go-mcp-servers/issues)에서 질문하세요
-- [Discussions](https://github.com/yourusername/data-go-mcp-servers/discussions)에서 아이디어를 공유하세요
+- [Issues](https://github.com/Koomook/data-go-mcp-servers/issues)에서 질문하세요
+- [Discussions](https://github.com/Koomook/data-go-mcp-servers/discussions)에서 아이디어를 공유하세요
 - 기존 MCP 서버 코드를 참조하세요

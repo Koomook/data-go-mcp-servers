@@ -133,7 +133,7 @@ AI 도구에서 다음과 같은 프롬프트를 사용할 수 있습니다:
 
 ```bash
 # 저장소 클론
-git clone https://github.com/yourusername/data-go-mcp-servers.git
+git clone https://github.com/Koomook/data-go-mcp-servers.git
 cd data-go-mcp-servers/src/nps-business-enrollment
 
 # 의존성 설치

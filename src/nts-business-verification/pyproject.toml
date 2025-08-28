@@ -27,11 +27,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/data-go-mcp-servers"
-Repository = "https://github.com/yourusername/data-go-mcp-servers"
-Documentation = "https://github.com/yourusername/data-go-mcp-servers/tree/main/src/nts-business-verification"
-"Bug Tracker" = "https://github.com/yourusername/data-go-mcp-servers/issues"
-Changelog = "https://github.com/yourusername/data-go-mcp-servers/blob/main/src/nts-business-verification/CHANGELOG.md"
+Homepage = "https://github.com/Koomook/data-go-mcp-servers"
+Repository = "https://github.com/Koomook/data-go-mcp-servers"
+Documentation = "https://github.com/Koomook/data-go-mcp-servers/tree/main/src/nts-business-verification"
+"Bug Tracker" = "https://github.com/Koomook/data-go-mcp-servers/issues"
+Changelog = "https://github.com/Koomook/data-go-mcp-servers/blob/main/src/nts-business-verification/CHANGELOG.md"
 
 [project.scripts]
 "data-go-mcp.nts-business-verification" = "data_go_mcp.nts_business_verification.server:main"

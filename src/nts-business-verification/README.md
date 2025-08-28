@@ -241,7 +241,7 @@ result = await batch_validate_businesses(businesses_json)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/data-go-mcp-servers.git
+git clone https://github.com/Koomook/data-go-mcp-servers.git
 cd data-go-mcp-servers/src/nts-business-verification
 
 # Install dependencies
@@ -286,4 +286,4 @@ Apache License 2.0
 
 ## Contributing
 
-Contributions are welcome! Please see the [main repository](https://github.com/yourusername/data-go-mcp-servers) for contribution guidelines.
+Contributions are welcome! Please see the [main repository](https://github.com/Koomook/data-go-mcp-servers) for contribution guidelines.

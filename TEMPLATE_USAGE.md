@@ -80,7 +80,7 @@ template/
 | `api_description` | API 설명 | `Weather forecast data from KMA` |
 | `api_key_env_name` | 환경변수 이름 | `WEATHER_FORECAST_API_KEY` |
 | `api_base_url` | API 기본 URL | `https://apis.data.go.kr/...` |
-| `github_username` | GitHub 사용자명 | `yourusername` |
+| `github_username` | GitHub 사용자명 | `Koomook` |
 | `version` | 초기 버전 | `0.1.0` |
 | `python_version` | 최소 Python 버전 | `3.10` |
 
@@ -193,4 +193,4 @@ twine upload dist/*
 ## 🤝 도움이 필요하신가요?
 
 - [CONTRIBUTING.md](CONTRIBUTING.md) - 기여 가이드
-- [Issues](https://github.com/yourusername/data-go-mcp-servers/issues) - 문제 보고
+- [Issues](https://github.com/Koomook/data-go-mcp-servers/issues) - 문제 보고

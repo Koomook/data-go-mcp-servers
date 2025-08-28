@@ -2,7 +2,7 @@
 
 한국 공공 데이터 포털(data.go.kr) API를 Model Context Protocol (MCP) 서버로 제공하는 프로젝트입니다.
 
-[![GitHub](https://img.shields.io/badge/github-data--go--mcp--servers-blue.svg?style=flat&logo=github)](https://github.com/yourusername/data-go-mcp-servers)
+[![GitHub](https://img.shields.io/badge/github-data--go--mcp--servers-blue.svg?style=flat&logo=github)](https://github.com/Koomook/data-go-mcp-servers)
 [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nps-business-enrollment)](https://pypi.org/project/data-go-mcp.nps-business-enrollment/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-brightgreen)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
@@ -146,7 +146,7 @@ AI 도구에서 다음과 같이 요청할 수 있습니다:
 
 ```bash
 # 레포지토리 클론
-git clone https://github.com/yourusername/data-go-mcp-servers.git
+git clone https://github.com/Koomook/data-go-mcp-servers.git
 cd data-go-mcp-servers
 
 # UV 설치
