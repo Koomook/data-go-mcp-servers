@@ -95,7 +95,7 @@ uv run pytest tests/
 ### 실제 API 테스트
 ```bash
 # 환경변수 설정
-export NPS_API_KEY="your-api-key"
+export API_KEY="your-api-key"
 
 # 서버 실행
 uv run python -m data_go_mcp.nps_business_enrollment.server
@@ -125,7 +125,7 @@ twine upload ../../dist/*
       "command": "uvx",
       "args": ["data-go-mcp.nps-business-enrollment@latest"],
       "env": {
-        "NPS_API_KEY": "your-api-key"
+        "API_KEY": "your-api-key"
       }
     }
   }
@@ -148,7 +148,7 @@ twine upload ../../dist/*
       ],
       "cwd": "/Users/username/github/data-go-mcp-servers/src/nts-business-verification",
       "env": {
-        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key",
+        "API_KEY": "your-api-key",
         "PYTHONPATH": "/Users/username/github/data-go-mcp-servers/src/nts-business-verification"
       }
     }
@@ -168,7 +168,7 @@ twine upload ../../dist/*
       ],
       "cwd": "C:\\Users\\username\\github\\data-go-mcp-servers\\src\\nts-business-verification",
       "env": {
-        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key",
+        "API_KEY": "your-api-key",
         "PYTHONPATH": "C:\\Users\\username\\github\\data-go-mcp-servers\\src\\nts-business-verification"
       }
     }
@@ -184,8 +184,8 @@ twine upload ../../dist/*
 
 ## API 키 관리
 
-각 공공 데이터 API는 별도의 API 키가 필요합니다:
+모든 data.go.kr API는 단일 API 키를 사용합니다:
 
 1. [data.go.kr](https://www.data.go.kr) 회원가입
 2. 필요한 API 신청
-3. 발급받은 키를 환경변수로 설정
+3. 발급받은 키를 API_KEY 환경변수로 설정

@@ -46,10 +46,10 @@ class FSCFinancialAPIClient:
     
     def __init__(self, api_key: Optional[str] = None):
         """Initialize API client with API key."""
-        self.api_key = api_key or os.getenv("FSC_FINANCIAL_INFO_API_KEY")
+        self.api_key = api_key or os.getenv("API_KEY")
         if not self.api_key:
             raise ValueError(
-                "API key is required. Set FSC_FINANCIAL_INFO_API_KEY environment variable or pass api_key parameter."
+                "API key is required. Set API_KEY environment variable or pass api_key parameter."
             )
         self.client = httpx.AsyncClient(timeout=30.0)
     

@@ -4,7 +4,7 @@
   "api_display_name": "Weather Forecast",
   "api_description": "Weather forecast data from Korea Meteorological Administration",
   "api_korean_name": "기상청 날씨 예보",
-  "api_key_env_name": "{{ cookiecutter.api_name.upper().replace('-', '_') }}_API_KEY",
+  "api_key_env_name": "API_KEY",
   "api_base_url": "https://apis.data.go.kr/1234567890/weather",
   "author_name": "Data.go.kr MCP Servers Contributors",
   "github_username": "yourusername",

@@ -19,10 +19,10 @@ class NPSAPIClient:
         self.base_url = "http://apis.data.go.kr/B552015/NpsBplcInfoInqireServiceV2"
         
         # 환경변수에서 API 키 가져오기 (필수)
-        self.api_key = os.getenv("NPS_API_KEY")
+        self.api_key = os.getenv("API_KEY")
         
         if not self.api_key:
-            raise ValueError("NPS_API_KEY environment variable is required. Get your API key from https://www.data.go.kr")
+            raise ValueError("API_KEY environment variable is required. Get your API key from https://www.data.go.kr")
         
         # HTTP 연결 사용 (공공데이터 API는 HTTP만 지원)
         # SSL 검증 비활성화 - HTTP 연결이므로 필요 없음

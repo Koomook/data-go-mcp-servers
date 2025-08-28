@@ -76,9 +76,6 @@ test_mcp.py
 .env*
 !.env.example
 
-# Claude
-.claude/
-
 # Build artifacts
 dist/
 build/

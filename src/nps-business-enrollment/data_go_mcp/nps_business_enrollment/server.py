@@ -216,10 +216,10 @@ def main():
     )
     
     # API 키 확인 (필수)
-    api_key = os.getenv("NPS_API_KEY")
+    api_key = os.getenv("API_KEY")
     if not api_key:
-        logging.error("NPS_API_KEY environment variable not found")
-        logging.error("Please set NPS_API_KEY environment variable with your API key from data.go.kr")
+        logging.error("API_KEY environment variable not found")
+        logging.error("Please set API_KEY environment variable with your API key from data.go.kr")
         sys.exit(1)
     
     # MCP 서버 실행

@@ -35,7 +35,7 @@ uvx data-go-mcp.nts-business-verification
 Set your API key as an environment variable:
 
 ```bash
-export NTS_BUSINESS_VERIFICATION_API_KEY="your-api-key-here"
+export API_KEY="your-api-key-here"
 ```
 
 ### Claude Desktop Configuration
@@ -54,7 +54,7 @@ Add to your Claude Desktop configuration file:
       "command": "uvx",
       "args": ["data-go-mcp.nts-business-verification@latest"],
       "env": {
-        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key-here"
+        "API_KEY": "your-api-key-here"
       }
     }
   }
@@ -76,7 +76,7 @@ For local development, use the virtual environment Python directly:
       ],
       "cwd": "/path/to/your/project/src/nts-business-verification",
       "env": {
-        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key-here",
+        "API_KEY": "your-api-key-here",
         "PYTHONPATH": "/path/to/your/project/src/nts-business-verification"
       }
     }
@@ -96,7 +96,7 @@ For local development, use the virtual environment Python directly:
       ],
       "cwd": "/Users/username/github/data-go-mcp-servers/src/nts-business-verification",
       "env": {
-        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key-here",
+        "API_KEY": "your-api-key-here",
         "PYTHONPATH": "/Users/username/github/data-go-mcp-servers/src/nts-business-verification"
       }
     }
@@ -116,7 +116,7 @@ For local development, use the virtual environment Python directly:
       ],
       "cwd": "C:\\Users\\username\\github\\data-go-mcp-servers\\src\\nts-business-verification",
       "env": {
-        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key-here",
+        "API_KEY": "your-api-key-here",
         "PYTHONPATH": "C:\\Users\\username\\github\\data-go-mcp-servers\\src\\nts-business-verification"
       }
     }

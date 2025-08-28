@@ -86,14 +86,14 @@ Claude Desktop의 설정 파일에 MCP 서버를 추가합니다:
       "command": "uvx",
       "args": ["data-go-mcp.nps-business-enrollment"],
       "env": {
-        "NPS_API_KEY": "your-api-key-here"
+        "API_KEY": "your-api-key-here"
       }
     },
     "data-go-mcp.nts-business-verification": {
       "command": "uvx",
       "args": ["data-go-mcp.nts-business-verification"],
       "env": {
-        "NTS_BUSINESS_VERIFICATION_API_KEY": "your-api-key-here"
+        "API_KEY": "your-api-key-here"
       }
     }
   }
@@ -113,7 +113,7 @@ VS Code의 Cline 확장에서 MCP 서버를 설정합니다:
       "command": "python",
       "args": ["-m", "data_go_mcp.nps_business_enrollment.server"],
       "env": {
-        "NPS_API_KEY": "your-api-key-here"
+        "API_KEY": "your-api-key-here"
       }
     }
   }
@@ -129,7 +129,7 @@ VS Code의 Cline 확장에서 MCP 서버를 설정합니다:
 #### 환경 변수 설정
 
 ```bash
-export NPS_API_KEY="your-api-key-here"  # data.go.kr에서 발급받은 API 키
+export API_KEY="your-api-key-here"  # data.go.kr에서 발급받은 API 키
 ```
 
 #### 사용 가능한 도구
@@ -161,7 +161,7 @@ AI 도구에서 다음과 같이 요청할 수 있습니다:
 #### 환경 변수 설정
 
 ```bash
-export NTS_BUSINESS_VERIFICATION_API_KEY="your-api-key-here"  # data.go.kr에서 발급받은 API 키
+export API_KEY="your-api-key-here"  # data.go.kr에서 발급받은 API 키
 ```
 
 #### 사용 가능한 도구

@@ -10,14 +10,14 @@ from data_go_mcp.nps_business_enrollment.api_client import NPSAPIClient
 async def test_client_requires_api_key():
     """Test that client raises error without API key."""
     with patch.dict(os.environ, {}, clear=True):
-        with pytest.raises(ValueError, match="NPS_API_KEY"):
+        with pytest.raises(ValueError, match="API_KEY"):
             NPSAPIClient()
 
 
 @pytest.mark.asyncio
 async def test_search_with_mock_response():
     """Test search with mocked API response."""
-    with patch.dict(os.environ, {"NPS_API_KEY": "test-key"}):
+    with patch.dict(os.environ, {"API_KEY": "test-key"}):
         async with NPSAPIClient() as client:
             # Mock the HTTP client
             mock_response = AsyncMock()

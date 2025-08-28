@@ -78,7 +78,7 @@ template/
 | `api_display_name` | 표시 이름 | `Weather Forecast` |
 | `api_korean_name` | 한국어 이름 | `기상청 날씨 예보` |
 | `api_description` | API 설명 | `Weather forecast data from KMA` |
-| `api_key_env_name` | 환경변수 이름 | `WEATHER_FORECAST_API_KEY` |
+| `api_key_env_name` | 환경변수 이름 | `API_KEY` |
 | `api_base_url` | API 기본 URL | `https://apis.data.go.kr/...` |
 | `github_username` | GitHub 사용자명 | `Koomook` |
 | `version` | 초기 버전 | `0.1.0` |
@@ -167,7 +167,7 @@ uv run pytest tests/ --cov
 
 ```bash
 # API 키 설정
-export YOUR_API_KEY="your-api-key"
+export API_KEY="your-api-key"
 
 # 서버 실행
 uv run python -m data_go_mcp.your_api_name.server

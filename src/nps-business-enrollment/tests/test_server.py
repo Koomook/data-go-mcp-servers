@@ -12,7 +12,7 @@ from data_go_mcp.nps_business_enrollment.server import search_business
 @pytest.mark.asyncio
 async def test_search_business_tool():
     """Test the search_business MCP tool."""
-    with patch.dict(os.environ, {"NPS_API_KEY": "test-key"}):
+    with patch.dict(os.environ, {"API_KEY": "test-key"}):
         # Mock the API client
         with patch('data_go_mcp.nps_business_enrollment.server.NPSAPIClient') as MockClient:
             mock_client_instance = AsyncMock()
@@ -46,7 +46,7 @@ async def test_search_business_tool():
 @pytest.mark.asyncio
 async def test_search_business_error_handling():
     """Test error handling in search_business tool."""
-    with patch.dict(os.environ, {"NPS_API_KEY": "test-key"}):
+    with patch.dict(os.environ, {"API_KEY": "test-key"}):
         with patch('data_go_mcp.nps_business_enrollment.server.NPSAPIClient') as MockClient:
             mock_client_instance = AsyncMock()
             MockClient.return_value.__aenter__.return_value = mock_client_instance

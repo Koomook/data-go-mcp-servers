@@ -25,7 +25,7 @@ uv pip install data-go-mcp.nps-business-enrollment
 이 서버를 사용하려면 data.go.kr에서 발급받은 API 키가 필요합니다:
 
 ```bash
-export NPS_API_KEY="your-api-key-here"
+export API_KEY="your-api-key-here"
 ```
 
 API 키는 [data.go.kr](https://www.data.go.kr)에서 회원가입 후 "국민연금공단_국민연금 가입 사업장 내역" API를 신청하여 발급받을 수 있습니다.
@@ -71,7 +71,7 @@ Claude Desktop에서 이 서버를 사용하려면 설정 파일을 수정하세
       "command": "uvx",
       "args": ["data-go-mcp.nps-business-enrollment"],
       "env": {
-        "NPS_API_KEY": "your-api-key-here"
+        "API_KEY": "your-api-key-here"
       }
     }
   }

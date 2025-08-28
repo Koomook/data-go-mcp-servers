@@ -20,21 +20,18 @@ def run_command(cmd: str, check: bool = True) -> bool:
 
 def check_dependencies() -> bool:
     """Check if required dependencies are installed."""
-    dependencies = {
-        "cookiecutter": "uv pip install cookiecutter",
-        "uv": "curl -LsSf https://astral.sh/uv/install.sh | sh"
-    }
-    
-    missing = []
-    for dep, install_cmd in dependencies.items():
-        if not run_command(f"which {dep}", check=False):
-            missing.append((dep, install_cmd))
-    
-    if missing:
+    # Only check for uv - cookiecutter will be handled by uv run
+    if not run_command("which uv", check=False):
         print("❌ Missing dependencies:")
-        for dep, cmd in missing:
-            print(f"  - {dep}: Install with '{cmd}'")
+        print("  - uv: Install with 'curl -LsSf https://astral.sh/uv/install.sh | sh'")
         return False
+    
+    # Ensure cookiecutter is available in the workspace
+    print("📦 Ensuring cookiecutter is available...")
+    if not run_command("uv sync --dev", check=False):
+        print("❌ Failed to sync dependencies. Please run 'uv sync --dev' manually.")
+        return False
+    
     return True
 
 

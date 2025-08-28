@@ -154,10 +154,10 @@ class YourAPIClient:
     BASE_URL = "https://api.data.go.kr/your-api-endpoint"
     
     def __init__(self):
-        self.api_key = os.getenv("YOUR_API_KEY")
+        self.api_key = os.getenv("API_KEY")
         if not self.api_key:
             raise ValueError(
-                "YOUR_API_KEY environment variable is required. "
+                "API_KEY environment variable is required. "
                 "Get your API key from https://www.data.go.kr"
             )
         self.client = httpx.AsyncClient(timeout=30.0)
@@ -302,7 +302,7 @@ uv pip install data-go-mcp-your-api-name
 ## 환경 변수 설정
 
 ```bash
-export YOUR_API_KEY="your-api-key-here"
+export API_KEY="your-api-key-here"
 ```
 
 ## 사용 가능한 도구
@@ -333,7 +333,7 @@ export YOUR_API_KEY="your-api-key-here"
       "command": "uvx",
       "args": ["data-go-mcp-your-api-name"],
       "env": {
-        "YOUR_API_KEY": "your-api-key-here"
+        "API_KEY": "your-api-key-here"
       }
     }
   }
@@ -362,14 +362,14 @@ from data_go_mcp.your_api_name.api_client import YourAPIClient
 async def test_search_without_api_key():
     """Test that client raises error without API key."""
     with patch.dict(os.environ, {}, clear=True):
-        with pytest.raises(ValueError, match="YOUR_API_KEY"):
+        with pytest.raises(ValueError, match="API_KEY"):
             YourAPIClient()
 
 
 @pytest.mark.asyncio
 async def test_search_with_mock_response():
     """Test search with mocked API response."""
-    with patch.dict(os.environ, {"YOUR_API_KEY": "test-key"}):
+    with patch.dict(os.environ, {"API_KEY": "test-key"}):
         async with YourAPIClient() as client:
             # Mock the HTTP client
             mock_response = AsyncMock()

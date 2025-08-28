@@ -15,7 +15,7 @@ from data_go_mcp.nts_business_verification.models import (
 @pytest.fixture
 def api_client():
     """API 클라이언트 fixture."""
-    with patch.dict("os.environ", {"NTS_BUSINESS_VERIFICATION_API_KEY": "test_api_key"}):
+    with patch.dict("os.environ", {"API_KEY": "test_api_key"}):
         return NtsBusinessVerificationAPIClient()
 
 
@@ -94,7 +94,7 @@ class TestAPIClient:
     
     def test_init_from_env(self):
         """환경변수에서 API 키 로드 테스트."""
-        with patch.dict("os.environ", {"NTS_BUSINESS_VERIFICATION_API_KEY": "env_key"}):
+        with patch.dict("os.environ", {"API_KEY": "env_key"}):
             client = NtsBusinessVerificationAPIClient()
             assert client.api_key == "env_key"
     

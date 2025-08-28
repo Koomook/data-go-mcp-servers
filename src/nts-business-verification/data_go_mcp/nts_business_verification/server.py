@@ -306,8 +306,8 @@ async def batch_validate_businesses(
 def main():
     """메인 함수."""
     # API 키 확인
-    if not os.getenv("NTS_BUSINESS_VERIFICATION_API_KEY"):
-        print(f"Warning: NTS_BUSINESS_VERIFICATION_API_KEY environment variable is not set")
+    if not os.getenv("API_KEY"):
+        print(f"Warning: API_KEY environment variable is not set")
         print(f"Please set it to use the NTS Business Verification API")
         print(f"You can get an API key from: https://www.data.go.kr")
     

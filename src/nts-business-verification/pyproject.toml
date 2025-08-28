@@ -1,6 +1,6 @@
 [project]
 name = "data-go-mcp.nts-business-verification"
-version = "0.1.0"
+version = "0.2.0"
 description = "MCP server for 국세청 사업자등록정보 진위확인 및 상태조회 서비스"
 readme = "README.md"
 authors = [

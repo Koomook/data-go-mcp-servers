@@ -67,10 +67,10 @@ async def run_server():
     logger.info(f"Starting {SERVER_NAME} v{SERVER_VERSION}")
     
     # Check for API key
-    api_key = os.getenv("FSC_FINANCIAL_INFO_API_KEY")
+    api_key = os.getenv("API_KEY")
     if not api_key:
         logger.warning(
-            "FSC_FINANCIAL_INFO_API_KEY not found in environment variables. "
+            "API_KEY not found in environment variables. "
             "The server will start but API calls will fail without a valid key."
         )
     
@@ -195,11 +195,11 @@ async def run_server():
         if not arguments:
             arguments = {}
         
-        api_key = os.getenv("FSC_FINANCIAL_INFO_API_KEY")
+        api_key = os.getenv("API_KEY")
         if not api_key:
             return [types.TextContent(
                 type="text",
-                text="Error: FSC_FINANCIAL_INFO_API_KEY environment variable is not set. Please set your API key to use this service."
+                text="Error: API_KEY environment variable is not set. Please set your API key to use this service."
             )]
         
         try:

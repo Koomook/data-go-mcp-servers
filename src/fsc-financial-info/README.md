@@ -43,7 +43,7 @@ Add to your Claude Desktop configuration file:
       "command": "uvx",
       "args": ["data-go-mcp.fsc-financial-info@latest"],
       "env": {
-        "FSC_FINANCIAL_INFO_API_KEY": "your-api-key-here"
+        "API_KEY": "your-api-key-here"
       }
     }
   }
@@ -186,7 +186,7 @@ Get comprehensive financial information including all three statements.
 
 The server handles various error conditions:
 
-- **No API Key**: "FSC_FINANCIAL_INFO_API_KEY environment variable is not set"
+- **No API Key**: "API_KEY environment variable is not set"
 - **Invalid Corporate Registration Number**: "법인등록번호는 13자리 숫자여야 합니다"
 - **Invalid Year**: "유효한 연도를 입력해주세요"
 - **No Data Found**: "조회된 재무제표가 없습니다"
@@ -226,7 +226,7 @@ uv run pytest tests/ -v
 ### Local Development
 ```bash
 # Set environment variable
-export FSC_FINANCIAL_INFO_API_KEY="your-api-key"
+export API_KEY="your-api-key"
 
 # Run server
 uv run python -m data_go_mcp.fsc_financial_info.server

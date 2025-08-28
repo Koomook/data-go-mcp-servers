@@ -23,10 +23,10 @@ class NtsBusinessVerificationAPIClient:
         Args:
             api_key: API 인증키. None이면 환경변수에서 로드
         """
-        self.api_key = api_key or os.getenv("NTS_BUSINESS_VERIFICATION_API_KEY")
+        self.api_key = api_key or os.getenv("API_KEY")
         if not self.api_key:
             raise ValueError(
-                f"API key is required. Set NTS_BUSINESS_VERIFICATION_API_KEY environment variable or pass api_key parameter."
+                f"API key is required. Set API_KEY environment variable or pass api_key parameter."
             )
         
         self.base_url = "https://api.odcloud.kr/api/nts-businessman/v1"
