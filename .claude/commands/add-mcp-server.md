@@ -107,7 +107,19 @@ Based on your input, I will:
 ## 🛠️ Detailed Implementation Steps
 
 ### Phase 1: Project Generation
-- [ ] Create project from template with auto-generated names
+- [ ] Create project from template using cookiecutter:
+  ```bash
+  uv run cookiecutter template/ -o src/
+  ```
+- [ ] When prompted, enter:
+  - api_name: {kebab-case-name}
+  - service_name_korean: {Korean service name}
+  - service_name_english: {English service name}
+  - package_name: data-go-mcp.{api-name}
+  - module_name: data_go_mcp.{api_name_underscore}
+  - api_key_env: {API_NAME}_API_KEY
+  - author_name: DataGo MCP
+  - author_email: contact@datago-mcp.dev
 - [ ] Set up correct directory structure
 - [ ] Configure pyproject.toml with dependencies
 
@@ -159,10 +171,19 @@ Each tool will have:
 - [ ] Error code reference
 
 ### Phase 7: Deployment
-- [ ] Build package: `uv build`
-- [ ] Deploy to PyPI: `uv run python scripts/deploy_to_pypi.py {api-name}`
-- [ ] Verify: `curl -I https://pypi.org/project/data-go-mcp.{api-name}/`
-- [ ] Test install: `uvx data-go-mcp.{api-name}@latest`
+- [ ] Build and deploy using automated script:
+  ```bash
+  # Deploy to PyPI (requires PYPI_API_TOKEN in .env)
+  uv run python scripts/deploy_to_pypi.py {api-name}
+  ```
+- [ ] Verify deployment:
+  ```bash
+  # Check PyPI page
+  curl -I https://pypi.org/project/data-go-mcp.{api-name}/
+  
+  # Test installation
+  uvx data-go-mcp.{api-name}@latest
+  ```
 
 ### Phase 8: Claude Desktop Setup
 ```json
@@ -201,8 +222,10 @@ data-go-mcp-fsc-financial-info = "data_go_mcp.fsc_financial_info.server:main"
 
 After fixing, increment version and redeploy:
 1. Update version in `pyproject.toml`, `__init__.py`, and `server.py`
-2. Rebuild: `uv build`
-3. Redeploy: `uv run python scripts/deploy_to_pypi.py {api-name}`
+2. Deploy using script (automatically builds and uploads):
+   ```bash
+   uv run python scripts/deploy_to_pypi.py {api-name}
+   ```
 
 ## 📊 Information Extraction Checklist
 
@@ -228,6 +251,16 @@ Your MCP server will be complete when:
 
 ## ⚡ Quick Start
 
+### Automated Template Generation:
+```bash
+# Run cookiecutter to create new MCP server
+uv run cookiecutter template/ -o src/
+
+# Or use the Python script for interactive mode
+uv run python scripts/create_mcp_server.py
+```
+
+### What to Provide:
 Just paste:
 1. Complete API documentation (Korean or English)
 2. 2-3 real usage examples
