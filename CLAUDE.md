@@ -103,15 +103,34 @@ uv run python -m data_go_mcp.nps_business_enrollment.server
 
 ## PyPI 배포
 
-### 빌드
+### 자동 배포 스크립트 사용 (권장)
+
 ```bash
-cd src/nps-business-enrollment
-uv build
+# 특정 패키지 배포
+uv run python scripts/deploy_to_pypi.py <package-name>
+
+# 예시: nps-business-enrollment 배포
+uv run python scripts/deploy_to_pypi.py nps-business-enrollment
+
+# 모든 패키지 배포
+uv run python scripts/deploy_to_pypi.py --all
 ```
 
-### 배포
+**필요 사항:**
+- `.env` 파일에 `PYPI_API_TOKEN` 설정
+- PyPI API 토큰은 https://pypi.org/manage/account/token/ 에서 생성
+
+### 수동 빌드 및 배포 (선택사항)
+
 ```bash
-twine upload ../../dist/*
+# 빌드
+cd src/nps-business-enrollment
+uv build
+
+# 배포 (환경변수로 인증)
+export TWINE_USERNAME=__token__
+export TWINE_PASSWORD=pypi-YOUR_TOKEN_HERE
+uv run twine upload dist/*
 ```
 
 ## Claude Desktop 설정
