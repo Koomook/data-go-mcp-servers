@@ -44,32 +44,48 @@ MCP 서버는 Model Context Protocol을 통해 특정 기능을 노출하는 경
 
 ## 사용 가능한 MCP 서버
 
-### 🏢 비즈니스 정보
-| 서버 | 설명 | 패키지 | PyPI |
-|------|------|--------|------|
-| **NPS Business Enrollment** | 국민연금공단 사업장 가입 정보 조회 | `data-go-mcp.nps-business-enrollment` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nps-business-enrollment)](https://pypi.org/project/data-go-mcp.nps-business-enrollment/) |
-| **NTS Business Verification** | 국세청 사업자등록정보 진위확인 및 상태조회 | `data-go-mcp.nts-business-verification` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nts-business-verification)](https://pypi.org/project/data-go-mcp.nts-business-verification/) |
+| 카테고리 | 서버명 | 설명 | 패키지 | PyPI |
+|----------|--------|------|--------|------|
+| **🏢 비즈니스 정보** | **NPS Business Enrollment** | 국민연금공단 사업장 가입 정보 조회 | `data-go-mcp.nps-business-enrollment` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nps-business-enrollment)](https://pypi.org/project/data-go-mcp.nps-business-enrollment/) |
+| **🏢 비즈니스 정보** | **NTS Business Verification** | 국세청 사업자등록정보 진위확인 및 상태조회 | `data-go-mcp.nts-business-verification` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.nts-business-verification)](https://pypi.org/project/data-go-mcp.nts-business-verification/) |
+| **📋 조달/계약** | **PPS Narajangteo** | 나라장터 입찰공고, 낙찰정보, 계약정보 | `data-go-mcp.pps-narajangteo` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.pps-narajangteo)](https://pypi.org/project/data-go-mcp.pps-narajangteo/) |
+| **💰 금융 정보** | **FSC Financial Info** | 금융위원회 기업 재무정보 (재무제표, 손익계산서) | `data-go-mcp.fsc-financial-info` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.fsc-financial-info)](https://pypi.org/project/data-go-mcp.fsc-financial-info/) |
+| **📜 공공 기록** | **Presidential Speeches** | 대통령기록관 연설문 조회 | `data-go-mcp.presidential-speeches` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.presidential-speeches)](https://pypi.org/project/data-go-mcp.presidential-speeches/) |
 
 ## 설치 및 설정
 
 ### UV를 사용한 설치
 
 ```bash
-# NPS Business Enrollment 서버 설치
+# 비즈니스 정보 서버
 uv pip install data-go-mcp.nps-business-enrollment
-
-# NTS Business Verification 서버 설치
 uv pip install data-go-mcp.nts-business-verification
+
+# 조달/계약 서버
+uv pip install data-go-mcp.pps-narajangteo
+
+# 금융 정보 서버
+uv pip install data-go-mcp.fsc-financial-info
+
+# 공공 기록 서버
+uv pip install data-go-mcp.presidential-speeches
 ```
 
 ### pip을 사용한 설치
 
 ```bash
-# NPS Business Enrollment 서버 설치
+# 비즈니스 정보 서버
 pip install data-go-mcp.nps-business-enrollment
-
-# NTS Business Verification 서버 설치
 pip install data-go-mcp.nts-business-verification
+
+# 조달/계약 서버
+pip install data-go-mcp.pps-narajangteo
+
+# 금융 정보 서버
+pip install data-go-mcp.fsc-financial-info
+
+# 공공 기록 서버
+pip install data-go-mcp.presidential-speeches
 ```
 
 ### Claude Desktop 설정
@@ -92,6 +108,27 @@ Claude Desktop의 설정 파일에 MCP 서버를 추가합니다:
     "data-go-mcp.nts-business-verification": {
       "command": "uvx",
       "args": ["data-go-mcp.nts-business-verification"],
+      "env": {
+        "API_KEY": "your-api-key-here"
+      }
+    },
+    "data-go-mcp.pps-narajangteo": {
+      "command": "uvx",
+      "args": ["data-go-mcp.pps-narajangteo"],
+      "env": {
+        "API_KEY": "your-api-key-here"
+      }
+    },
+    "data-go-mcp.fsc-financial-info": {
+      "command": "uvx",
+      "args": ["data-go-mcp.fsc-financial-info"],
+      "env": {
+        "API_KEY": "your-api-key-here"
+      }
+    },
+    "data-go-mcp.presidential-speeches": {
+      "command": "uvx",
+      "args": ["data-go-mcp.presidential-speeches"],
       "env": {
         "API_KEY": "your-api-key-here"
       }
