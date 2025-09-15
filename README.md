@@ -100,35 +100,35 @@ Claude Desktop의 설정 파일에 MCP 서버를 추가합니다:
   "mcpServers": {
     "data-go-mcp.nps-business-enrollment": {
       "command": "uvx",
-      "args": ["data-go-mcp.nps-business-enrollment"],
+      "args": ["data-go-mcp.nps-business-enrollment@latest"],
       "env": {
         "API_KEY": "your-api-key-here"
       }
     },
     "data-go-mcp.nts-business-verification": {
       "command": "uvx",
-      "args": ["data-go-mcp.nts-business-verification"],
+      "args": ["data-go-mcp.nts-business-verification@latest"],
       "env": {
         "API_KEY": "your-api-key-here"
       }
     },
     "data-go-mcp.pps-narajangteo": {
       "command": "uvx",
-      "args": ["data-go-mcp.pps-narajangteo"],
+      "args": ["data-go-mcp.pps-narajangteo@latest"],
       "env": {
         "API_KEY": "your-api-key-here"
       }
     },
     "data-go-mcp.fsc-financial-info": {
       "command": "uvx",
-      "args": ["data-go-mcp.fsc-financial-info"],
+      "args": ["data-go-mcp.fsc-financial-info@latest"],
       "env": {
         "API_KEY": "your-api-key-here"
       }
     },
     "data-go-mcp.presidential-speeches": {
       "command": "uvx",
-      "args": ["data-go-mcp.presidential-speeches"],
+      "args": ["data-go-mcp.presidential-speeches@latest"],
       "env": {
         "API_KEY": "your-api-key-here"
       }
@@ -136,6 +136,8 @@ Claude Desktop의 설정 파일에 MCP 서버를 추가합니다:
   }
 }
 ```
+
+**참고**: `@latest`를 사용하면 항상 최신 버전이 실행됩니다.
 
 ### Cline 설정
 

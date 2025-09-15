@@ -98,10 +98,12 @@ class PpsNarajangteoAPIClient:
             
             # 오류 응답 확인
             if isinstance(data, dict):
-                header = data.get("header", {})
+                # response 객체 확인
+                response_data = data.get("response", data)
+                header = response_data.get("header", {})
                 result_code = header.get("resultCode", "")
                 result_msg = header.get("resultMsg", "")
-                
+
                 if result_code != "00":
                     # 에러 코드 처리
                     error_messages = {

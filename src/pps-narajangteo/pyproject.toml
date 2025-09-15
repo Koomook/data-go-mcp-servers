@@ -1,6 +1,6 @@
 [project]
 name = "data-go-mcp.pps-narajangteo"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server for 나라장터 공공데이터개방표준서비스 (Public Procurement Service Open Data Standard)"
 readme = "README.md"
 authors = [

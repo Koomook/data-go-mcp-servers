@@ -123,8 +123,10 @@ async def search_bid_announcements(
             )
             
             # 응답 처리
-            if "body" in result:
-                body = result["body"]
+            # response wrapper 처리
+            response_data = result.get("response", result)
+            if "body" in response_data:
+                body = response_data["body"]
                 items = body.get("items", [])
                 
                 # items가 dict인 경우 list로 변환
@@ -220,8 +222,10 @@ async def search_successful_bids(
             )
             
             # 응답 처리
-            if "body" in result:
-                body = result["body"]
+            # response wrapper 처리
+            response_data = result.get("response", result)
+            if "body" in response_data:
+                body = response_data["body"]
                 items = body.get("items", [])
                 
                 # items가 dict인 경우 list로 변환
@@ -325,8 +329,10 @@ async def search_contracts(
             )
             
             # 응답 처리
-            if "body" in result:
-                body = result["body"]
+            # response wrapper 처리
+            response_data = result.get("response", result)
+            if "body" in response_data:
+                body = response_data["body"]
                 items = body.get("items", [])
                 
                 # items가 dict인 경우 list로 변환
@@ -404,8 +410,10 @@ async def get_bid_detail(
             )
             
             # 응답 처리
-            if "body" in result:
-                body = result["body"]
+            # response wrapper 처리
+            response_data = result.get("response", result)
+            if "body" in response_data:
+                body = response_data["body"]
                 items = body.get("items", [])
                 
                 # items가 dict인 경우 list로 변환
