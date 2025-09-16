@@ -168,6 +168,87 @@ https://msds.kosha.or.kr/openapi/service/msdschem/chemlist?serviceKey=[서비스
 https://msds.kosha.or.kr/openapi/service/msdschem/chemdetail01?serviceKey=[서비스키]&chemId=000001
 ```
 
+**응답 XML 예제**
+```xml
+<response>
+  <header>
+    <resultCode>00</resultCode>
+    <resultMsg>NORMAL SERVICE.</resultMsg>
+  </header>
+  <body>
+    <items>
+      <item>
+        <itemDetail>염산 구아니딘</itemDetail>
+        <lev>1</lev>
+        <msdsItemCode>A02</msdsItemCode>
+        <msdsItemNameKor>제품명</msdsItemNameKor>
+        <msdsItemNo>가</msdsItemNo>
+        <ordrIdx>1002</ordrIdx>
+        <upMsdsItemCode>A</upMsdsItemCode>
+      </item>
+      <item>
+        <itemDetail>자료없음</itemDetail>
+        <lev>1</lev>
+        <msdsItemCode>A04</msdsItemCode>
+        <msdsItemNameKor>제품의 권고 용도와 사용상의 제한</msdsItemNameKor>
+        <msdsItemNo>나</msdsItemNo>
+        <ordrIdx>1004</ordrIdx>
+        <upMsdsItemCode>A</upMsdsItemCode>
+      </item>
+      <item>
+        <itemDetail>자료없음</itemDetail>
+        <lev>2</lev>
+        <msdsItemCode>A0401</msdsItemCode>
+        <msdsItemNameKor>제품의 권고 용도</msdsItemNameKor>
+        <ordrIdx>1006</ordrIdx>
+        <upMsdsItemCode>A04</upMsdsItemCode>
+      </item>
+      <item>
+        <itemDetail>자료없음</itemDetail>
+        <lev>2</lev>
+        <msdsItemCode>A0402</msdsItemCode>
+        <msdsItemNameKor>제품의 사용상의 제한</msdsItemNameKor>
+        <ordrIdx>1008</ordrIdx>
+        <upMsdsItemCode>A04</upMsdsItemCode>
+      </item>
+      <item>
+        <itemDetail>자료없음</itemDetail>
+        <lev>2</lev>
+        <msdsItemCode>A06</msdsItemCode>
+        <msdsItemNameKor>공급자 정보(수입품의 경우 긴급 연락 가능한 국내 공급자 정보 기재)</msdsItemNameKor>
+        <msdsItemNo>다</msdsItemNo>
+        <ordrIdx>1010</ordrIdx>
+        <upMsdsItemCode>A</upMsdsItemCode>
+      </item>
+      <item>
+        <itemDetail>자료없음</itemDetail>
+        <lev>2</lev>
+        <msdsItemCode>A0602</msdsItemCode>
+        <msdsItemNameKor>회사명</msdsItemNameKor>
+        <ordrIdx>1012</ordrIdx>
+        <upMsdsItemCode>A06</upMsdsItemCode>
+      </item>
+      <item>
+        <itemDetail>자료없음</itemDetail>
+        <lev>2</lev>
+        <msdsItemCode>A0604</msdsItemCode>
+        <msdsItemNameKor>주소</msdsItemNameKor>
+        <ordrIdx>1014</ordrIdx>
+        <upMsdsItemCode>A06</upMsdsItemCode>
+      </item>
+      <item>
+        <itemDetail>자료없음</itemDetail>
+        <lev>2</lev>
+        <msdsItemCode>A0606</msdsItemCode>
+        <msdsItemNameKor>긴급전화번호</msdsItemNameKor>
+        <ordrIdx>1016</ordrIdx>
+        <upMsdsItemCode>A06</upMsdsItemCode>
+      </item>
+    </items>
+  </body>
+</response>
+```
+
 #### ③ getChemDetail02 (2. 유해성·위험성)
 
 **유형**: 조회(상세)
