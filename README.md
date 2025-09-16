@@ -51,6 +51,7 @@ MCP 서버는 Model Context Protocol을 통해 특정 기능을 노출하는 경
 | **📋 조달/계약** | **PPS Narajangteo** | 나라장터 입찰공고, 낙찰정보, 계약정보 | `data-go-mcp.pps-narajangteo` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.pps-narajangteo)](https://pypi.org/project/data-go-mcp.pps-narajangteo/) |
 | **💰 금융 정보** | **FSC Financial Info** | 금융위원회 기업 재무정보 (재무제표, 손익계산서) | `data-go-mcp.fsc-financial-info` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.fsc-financial-info)](https://pypi.org/project/data-go-mcp.fsc-financial-info/) |
 | **📜 공공 기록** | **Presidential Speeches** | 대통령기록관 연설문 조회 | `data-go-mcp.presidential-speeches` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.presidential-speeches)](https://pypi.org/project/data-go-mcp.presidential-speeches/) |
+| **⚗️ 안전 정보** | **MSDS Chemical Info** | 물질안전보건자료(MSDS) 화학물질 정보 | `data-go-mcp.msds-chemical-info` | [![PyPI](https://img.shields.io/pypi/v/data-go-mcp.msds-chemical-info)](https://pypi.org/project/data-go-mcp.msds-chemical-info/) |
 
 ## 설치 및 설정
 
@@ -69,6 +70,9 @@ uv pip install data-go-mcp.fsc-financial-info
 
 # 공공 기록 서버
 uv pip install data-go-mcp.presidential-speeches
+
+# 안전 정보 서버
+uv pip install data-go-mcp.msds-chemical-info
 ```
 
 ### pip을 사용한 설치
@@ -86,6 +90,9 @@ pip install data-go-mcp.fsc-financial-info
 
 # 공공 기록 서버
 pip install data-go-mcp.presidential-speeches
+
+# 안전 정보 서버
+pip install data-go-mcp.msds-chemical-info
 ```
 
 ### Claude Desktop 설정
@@ -129,6 +136,13 @@ Claude Desktop의 설정 파일에 MCP 서버를 추가합니다:
     "data-go-mcp.presidential-speeches": {
       "command": "uvx",
       "args": ["data-go-mcp.presidential-speeches@latest"],
+      "env": {
+        "API_KEY": "your-api-key-here"
+      }
+    },
+    "data-go-mcp.msds-chemical-info": {
+      "command": "uvx",
+      "args": ["data-go-mcp.msds-chemical-info@latest"],
       "env": {
         "API_KEY": "your-api-key-here"
       }
